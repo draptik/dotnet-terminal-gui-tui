@@ -21,6 +21,15 @@ internal class Program
         };
 
         top.Add(win);
-        Application.Run();
+        try
+        {
+            // NOTE: It seems that the Application.Run() method should be wrapped in a try/finally block.
+            // Otherwise, the application will not exit when the user closes the window.
+            Application.Run();
+        }
+        finally
+        {
+            Application.Shutdown();
+        }
     }
 }
