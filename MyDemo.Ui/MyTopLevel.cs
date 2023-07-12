@@ -7,7 +7,7 @@ public class MyTopLevel : Toplevel
     public MyTopLevel()
     {
         // Menu
-        var menu = new MenuBar(new MenuBarItem[]
+        var menuBar = new MenuBar(new MenuBarItem[]
         {
             new("_File", new[]
             {
@@ -31,16 +31,8 @@ public class MyTopLevel : Toplevel
             _oStatusItem
         });
 
-        var mainPane = new FrameView("Main Pane")
-        {
-            X = 0,
-            Y = 1, // for menu bar
-            Width = Dim.Fill(),
-            Height = Dim.Fill(1) // for status bar
-        };
-
-        Add(menu);
-        Add(mainPane);
+        Add(menuBar);
+        Add(new MainWindow()); // Add the main top-level window
         Add(statusBar);
 
         Loaded += LoadedHandler;
