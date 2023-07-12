@@ -11,7 +11,8 @@ internal class Program
         {
             // NOTE: It seems that the Application.Run() method should be wrapped in a try/finally block.
             // Otherwise, the application will not exit when the user closes the window.
-            Application.Run(new DirectoryBrowserView());
+            // Application.Run(new DirectoryBrowserView());
+            Application.Run(new MyTopLevel());
         }
         finally
         {
