@@ -1,3 +1,4 @@
+using MyDemo.Ui.Domain;
 using Terminal.Gui;
 
 namespace MyDemo.Ui;
@@ -34,7 +35,7 @@ public class MyTopLevel : Toplevel
         });
 
         Add(menuBar);
-        Add(new MainWindow()); // Add the main top-level window
+        Add(new MainWindow(new CoreDomain())); // Add the main top-level window
         Add(statusBar);
 
         Loaded += LoadedHandler;
