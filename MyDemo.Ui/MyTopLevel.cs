@@ -40,9 +40,15 @@ public class MyTopLevel : Toplevel
 
     private void LoadedHandler()
     {
-        _oStatusItem.Title =
-            $"OS: {Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.OperatingSystem} {Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.OperatingSystemVersion}";
+        _oStatusItem.Title = $"OS: {GetOperatingSystemAndVersion()}";
         
         Loaded -= LoadedHandler;
+    }
+    
+    private static string GetOperatingSystemAndVersion()
+    {
+        var os = Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.OperatingSystem;
+        var osVersion = Microsoft.DotNet.PlatformAbstractions.RuntimeEnvironment.OperatingSystemVersion;
+        return $"{os} {osVersion}".Trim();
     }
 }
