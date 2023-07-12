@@ -1,5 +1,7 @@
 using Terminal.Gui;
 
+namespace MyDemo.Ui;
+
 public class MainWindow : Window
 {
     public MainWindow()

@@ -1,5 +1,6 @@
-﻿using MyDemo.Ui;
-using Terminal.Gui;
+﻿using Terminal.Gui;
+
+namespace MyDemo.Ui;
 
 internal class Program
 {

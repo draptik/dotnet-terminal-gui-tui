@@ -1,5 +1,7 @@
 using Terminal.Gui;
 
+namespace MyDemo.Ui;
+
 public class MyTopLevel : Toplevel
 {
     private readonly StatusItem _oStatusItem = new(Key.CharMask, "OS: ", null);
